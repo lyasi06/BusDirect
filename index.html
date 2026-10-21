@@ -132,7 +132,48 @@
             </article>
           </section>
       </section>
-      
+      <div class="flex flex-col gap-6">
+
+      <section class="rounded-xl border h-72 border-slate-300 bg-white p-4 shadow-sm sm:p-6">
+        <p class="text-xl pb-4 font-bold">Réserver une place</p>
+        <form>
+          <div class="pb-2">
+          <label for="Nom-dupassager">Nom du passager</label>
+          <input type="text" name="Nom du passager" id="Nom-dupassager" placeholder="EX: votre nom et prenom"
+          class="w-full rounded-lg border border-slate-500 bg-white px-3 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600">
+          </div>
+          <div class="pb-3">
+            <label for="reserve-seat">Siège</label>
+            <select id="reserve-seat"
+                class="w-full rounded-lg border border-slate-500 bg-white px-3 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600">
+                <option value="1">Premier Siège Libre (automatique)</option>
+                <option value="2">Siège 1</option>
+                <option value="3">Siège 2</option>
+                <option value="4">Siège 5</option>
+                <option value="5">Siège 6</option>
+                <option value="6">Siège 7</option>
+                <option value="7">Siège 8</option>
+                <option value="8">Siège 9</option>
+                <option value="9">Siège 10</option>
+                <option value="10">Siège 11</option>
+                <option value="11">Siège 12</option>
+                <option value="12">Siège 13</option>
+                <option value="13">Siège 15</option>
+                <option value="14">Siège 16</option>
+                <option value="15">Siège 17</option>
+                <option value="16">Siège 18</option>
+                <option value="17">Siège 19</option>
+                <option value="18">Siège 20</option>
+              </select>
+              </div>
+              <button type="submit" class="w-full rounded-lg px-4 py-2 font-semibold text-white focus:outline-none focus:ring-2 focus:ring-offset-2 bg-blue-700 hover:bg-blue-800 focus:ring-blue-700">Réserver</button>
+          </form>
+          </section>
+          
+      </div>
+
+
+    
   </main>
     <footer class=" bg-slate-900 text-slate-300 py-4 text-center w-full ">
         <p>@2026.BusDirect</p>
