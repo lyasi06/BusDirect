@@ -22,21 +22,20 @@
       <section class="grid grid-cols-1 gap-4 sm:grid-cols-3">
       <div class="border-2 rounded-lg h-28 p-7 m-5">
         <p class="text-sm text-slate-700">Places disponibles</p>
-        <p class="text-3xl font-bold text-emerald-700"><span id="available">17</span> / 20</p>
+        <p id="disponible" class="text-3xl font-bold text-emerald-700"><span id="available">20</span> / 20</p>
       </div>
       <div class="border-2 rounded-lg h-28 p-7 m-5">
         <p class="text-sm text-slate-700">Places occupées</p>
-        <p id="occupied" class="text-3xl font-bold text-rose-700">3</p>
+        <p id="occupées" class="text-3xl font-bold text-rose-700">0</p>
       </div>
       <div class="border-2 rounded-lg h-28 p-7 m-5">
         <p class="text-sm text-slate-700">Recette totale (80 DH / place)</p>
-        <p id="revenue" class="text-3xl font-bold">180 DH</p>
+        <p id="recette" class="text-3xl font-bold">0 DH</p>
       </div>
     </section>
 
     <div class="mx-5 mb-6 mt-6 grid gap-6 lg:grid-cols-2">
 
-      <!-- Plan de la cabine -->
       <section class="rounded-xl border  border-slate-300 bg-white p-4 shadow-sm sm:p-6">
         <h2 class="text-xl font-bold">Plan de la cabine</h2>
 
@@ -49,7 +48,7 @@
           <p class="mb-3 rounded-lg bg-slate-300 py-1 text-center text-sm font-medium">Avant du bus · Conducteur</p>
           <div id="cabin" class="flex flex-col gap-2"></div>
         </div>
-        <section class="grid grid-cols-4 gap-4">
+        <section id="seats" class="grid grid-cols-4 gap-4">
         <article class="rounded-lg border mt-4 border-green-200 bg-white p-2 text-center">
             <h3 class="font-bold text-green-700">01</h3>
             <p class="text-xs text-slate-500">Libre</p>
@@ -58,13 +57,13 @@
             <h3 class="font-bold text-green-700">02</h3>
             <p class="text-xs text-slate-500">Libre</p>
             </article>
-            <article class="rounded-lg border mt-4 border-red-200 bg-white p-2 text-center">
-            <h3 class="font-bold text-red-300">03</h3>
-            <p class="text-xs border bg-white rounded-lg text-slate-500">Abdelah.l</p>
+            <article class="rounded-lg border mt-4 border-green-200 bg-white p-2 text-center">
+            <h3 class="font-bold text-green-700">03</h3>
+            <p class="text-xs text-slate-500">Libre</p>
             </article>
-          <article class="rounded-lg border mt-4 border-red-200 bg-white p-2 text-center">
-            <h3 class="font-bold text-red-300">04</h3> 
-            <p class="text-xs border bg-white rounded-lg text-slate-500">Yassin.b</p>
+          <article class="rounded-lg border mt-4 border-green-200 bg-white p-2 text-center">
+            <h3 class="font-bold text-green-700">04</h3> 
+            <p class="text-xs text-slate-500">Libre</p>
             </article>
             <article class="rounded-lg border border-green-200 bg-white p-2 text-center">
             <h3 class="font-bold text-green-700">05</h3>
@@ -102,9 +101,9 @@
             <h3 class="font-bold text-green-700">13</h3>
             <p class="text-xs text-slate-500">Libre</p>
             </article>
-            <article class="rounded-lg border border-red-200 bg-white p-2 text-center">
-            <h3 class="font-bold text-red-300">14</h3> 
-            <p class="text-xs border bg-white rounded-lg text-slate-500">Salma.e</p>
+            <article class="rounded-lg border border-green-200 bg-white p-2 text-center">
+            <h3 class="font-bold text-green-700">14</h3> 
+            <p class="text-xs text-slate-500">Libre</p>
             </article>
             <article class="rounded-lg border border-green-200 bg-white p-2 text-center">
             <h3 class="font-bold text-green-700">15</h3>
@@ -136,7 +135,7 @@
 
       <section class="rounded-xl border h-72 border-slate-300 bg-white p-4 shadow-sm sm:p-6">
         <p class="text-xl pb-4 font-bold">Réserver une place</p>
-        <form>
+        <form id="form-reserve">
           <div class="pb-2">
           <label for="Nom-dupassager">Nom du passager</label>
           <input type="text" name="Nom du passager" id="Nom-dupassager" placeholder="EX: votre nom et prenom"
@@ -146,28 +145,12 @@
             <label for="reserve-seat">Siège</label>
             <select id="reserve-seat"
                 class="w-full rounded-lg border border-slate-500 bg-white px-3 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600">
-                <option value="1">Premier Siège Libre (automatique)</option>
-                <option value="2">Siège 1</option>
-                <option value="3">Siège 2</option>
-                <option value="4">Siège 5</option>
-                <option value="5">Siège 6</option>
-                <option value="6">Siège 7</option>
-                <option value="7">Siège 8</option>
-                <option value="8">Siège 9</option>
-                <option value="9">Siège 10</option>
-                <option value="10">Siège 11</option>
-                <option value="11">Siège 12</option>
-                <option value="12">Siège 13</option>
-                <option value="13">Siège 15</option>
-                <option value="14">Siège 16</option>
-                <option value="15">Siège 17</option>
-                <option value="16">Siège 18</option>
-                <option value="17">Siège 19</option>
-                <option value="18">Siège 20</option>
+                <option value="auto">Premier Siège Libre (automatique)</option>
               </select>
               </div>
               <button type="submit" class="w-full rounded-lg px-4 py-2 font-semibold text-white focus:outline-none focus:ring-2 focus:ring-offset-2 bg-blue-700 hover:bg-blue-800 focus:ring-blue-700">Réserver</button>
           </form>
+          <div id="msg-reserve" class="mt-3"></div>
           </section>
           <section class="rounded-xl border h-96 border-slate-300 bg-white p-4 shadow-sm sm:p-6">
             <p class="text-xl pb-4 font-bold">Modifier une réservation</p>
@@ -175,10 +158,7 @@
               <div class="pb-3">
             <label for="Passager">Passager</label>
             <select id="Passager" class="w-full rounded-lg border border-slate-500 bg-white px-3 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600">
-              <option value="1">Choisir un passager</option>
-              <option value="2">Abdelah.l</option>
-              <option value="3">Yassin.b</option>
-              <option value="4">Salma.e</option>
+            
             </select>
             </div>
             <div class="pb-3">
@@ -211,23 +191,22 @@
               <option value="20">Siège 20</option>
             </select>
             </div>
+            <button type="submit" id="btnmodify"  class="w-full rounded-lg px-4 py-2 font-semibold text-white focus:outline-none focus:ring-2 focus:ring-offset-2 bg-orange-700 hover:bg-orange-800 focus:ring-orange-700">Enregistrer les modifications</button>
           </form>
-          <button type="submit" class="w-full rounded-lg px-4 py-2 font-semibold text-white focus:outline-none focus:ring-2 focus:ring-offset-2 bg-orange-700 hover:bg-orange-800 focus:ring-orange-700">Enregistrer les modifications</button>
+          
           </section>
           <section class="rounded-xl border h-76 border-slate-300 bg-white p-4 shadow-sm sm:p-6">
             <p class="text-xl pb-4 font-bold">Supprimer une réservation</p>
             <form>
               <div class="pb-3">
               <label for="Pass-ager">Passager</label>
-              <select id="Pass-ager" class="w-full rounded-lg border border-slate-500 bg-white px-3 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600">
-                <option value="1">Choisir un passager</option>
-              <option value="2">Abdelah.l</option>
-              <option value="3">Yassin.b</option>
-              <option value="4">Salma.e</option>
+            <select id="Pass-ager" class="w-full rounded-lg border border-slate-500 bg-white px-3 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600">
+              <option value="">choisi un passager...</option>
               </select>
               </div>
+              <button id="btnSupprimer" type="submit" class="w-full rounded-lg px-4 py-2 font-semibold text-white focus:outline-none focus:ring-2 focus:ring-offset-2 bg-orange-700 hover:bg-orange-800 focus:ring-orange-700">Supprimer</button>
             </form>
-            <button type="submit" class="w-full rounded-lg px-4 py-2 font-semibold text-white focus:outline-none focus:ring-2 focus:ring-offset-2 bg-orange-700 hover:bg-orange-800 focus:ring-orange-700">Supprimer</button>
+            
           </section>
       </div>
       </div>
