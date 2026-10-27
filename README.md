@@ -51,5 +51,3 @@ git push -u origin main
 
 ## Auteur
 ABDERRAHMANE LYASI
-
-[Ton nom et prénom]
